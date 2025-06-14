@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML para PDF</title>
+  <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .logo {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .left-part {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seu-logo-text {
+        font-size: 48px;
+        font-weight: bold;
+        color: #0D2A51;
+        font-family: 'Arial', sans-serif;
+        display: flex; /* Adiciona flexbox para alinhar melhor o texto e o SVG */
+        align-items: center;
+        gap: 10px; /* Espaçamento entre o texto e o ícone */
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        color: #0D2A51;
+        font-weight: bold;
+        margin-left: 57px;
+    }
+
+    header {
+        padding: 2rem;
+        background-color: #ffff;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .endereco, .bairro, .CNPJ, .email {
+        text-align: center;
+    }
+
+    .main {
+        background-color: white; /* azul claro */
+        padding: 2rem;
+        margin-top: 1rem; /* espaçamento de 1rem abaixo do header */
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecalho h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .tabela-nota {
+        width: 90%;
+        margin: 2rem auto 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba((0,0,0, 0.1), green, blue, alpha);
+    }
+
+    .tabela-nota th.tabela-nota td {
+        border: 1px solid #ccc;
+        padding: 12px 8px;
+        text-align: center;
+    }
+
+    .tabela-nota thead {
+        background-color: #0D2A51;
+        color: #fff;
+    }
+
+    .main2 {
+        background-color: white; /* azul claro */
+        padding: 2rem;
+        margin-top: 1rem; /* espaçamento de 1rem abaixo do header */
+        width: 100%;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 25px;
+        text-align: left;
+        padding-bottom: 5px;
+    }
+
+    .endereco2, .bairro2, .CNPJ2, .email2 {
+        text-align: left;
+    }
+
+    .conteudo {
+        background-color: white; /* azul claro */
+        padding: 2rem;
+        margin-top: 10px; /* espaçamento de 1rem abaixo do header */
+        width: 100%;
+        text-align: left;
+    }
+
+    .describe {
+        text-align: left;
+    }
+
+    .bold {
+        font-weight: 900;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <div class="logo">
+            <div class="left-part">
+                <div class="seu-logo-text">
+                    SEU LOGO
+                </div>
+                <div class="subtitulo">AQUI DENTRO</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cabeçalho -->
+    <header>
+        <h1>AQUI VAI O TÍTULO QUE QUISER</h1>
+        <P class="endereco"><b>Endereço</b>: Informações complementares (opicional)</P>
+        <p class="bairro"><b>Bairro</b>: Informações complementares (opicional)</p>
+        <p class="CNPJ"><b>CNPJ</b>: Informações complementares (opicional)</p>
+        <p class="email"><b>E-mail</b>: seu_emailTeste.@dominio.com.br<link rel="seu_emailTeste.@dominio.com.br" href="seu_emailTeste.@dominio.com.br"></p>
+    </header>
+
+    <!-- titulo e valor da nota -->
+    <div class="main">
+        <div class="cabeçalho">
+            <h2>CONTEÚDOS COMPLEMENTAR</h2>
+        </div>
+        <table class="tabela-nota">
+            <thead>
+                <tr>
+                    <th>CNPJ</th>
+                    <th>Valor</th>
+                    <th>Data de Emissão</th>
+                    <th>Data de Vencimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cnpj_empresa}} </td>
+                    <td>R${{valor_nota}}</td>
+                    <td>09/01/2040</td>
+                    <td>09/01/2040</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- informacoes da empresa -->
+
+    <div class="main2">
+        <div>
+            <h3>{{primeira_palavra}}</h3>
+            <P class="endereco2"><b>Endereço</b>: Informações sobre o cliente (opicional)</P>
+            <p class="bairro2"><b>Bairro</b>: Informações sobre o cliente (opicional)</p>
+            <p class="CNPJ2"><b>CNPJ</b>: {{cnpj_empresa}}</p>
+            <p class="email2"><b>E-mail</b>: emailCliente@teste.com.br<link rel="emailCliente@teste.com.br" href="emailCliente@teste.com.br"></p>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <h3>Descrição</h3>
+        <p class="describe">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+    </div>
+
+    <div class="conteudo">
+        <h3>Considerações Finais</h3>
+        <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+
+
+</body>
+</html>
