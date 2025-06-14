@@ -30,7 +30,7 @@ After generate of archive.pdf the function send_email, receiver thres paramenter
 - email of who is receiver and
 - password that google generated
 
-Send_email function has the scope ready for this scenario of Gmail, take archive.pdf + subject + body for send addressee
+Send_email function has the scope ready for this scenario of Gmail, take archive.pdf + subject + body for send addressee. When it is sent, the code will send the archive.pdf as an attachment.
 
 
 
