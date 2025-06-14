@@ -2,7 +2,6 @@ import sys
 import os
 import jinja2
 import pdfkit
-import pandas as pd
 
 
 # Adiciona a pasta raiz do projeto ao sys.path
